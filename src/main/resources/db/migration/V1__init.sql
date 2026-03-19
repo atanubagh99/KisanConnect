@@ -1,0 +1,14 @@
+-- ==============================================================================
+-- V1__init.sql — Initial database schema
+-- ==============================================================================
+-- This migration creates the foundational tables for KisanConnect.
+-- Add your initial schema here when ready.
+--
+-- Example:
+-- CREATE TABLE users (
+--     id          BIGSERIAL PRIMARY KEY,
+--     name        VARCHAR(255) NOT NULL,
+--     email       VARCHAR(255) NOT NULL UNIQUE,
+--     created_at  TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+--     updated_at  TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+-- );

@@ -1,0 +1,43 @@
+# ==============================================================================
+# KisanConnect — Development Profile
+# ==============================================================================
+
+spring:
+  # H2 in-memory database
+  datasource:
+    url: jdbc:h2:mem:kisanconnect_dev;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  # JPA — auto DDL for dev convenience
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+
+  # Flyway disabled in dev (using Hibernate DDL auto)
+  flyway:
+    enabled: false
+
+  # Disable OpenAI embedding (Groq doesn't support embeddings)
+  # Use local ONNX/Transformers embedding model instead
+  ai:
+    openai:
+      embedding:
+        enabled: false
+
+# ==============================================================================
+# Logging — verbose for development
+# ==============================================================================
+logging:
+  level:
+    "[com.kisanconnect]": DEBUG
+    "[org.springframework.web]": DEBUG
+    "[org.springframework.ai]": DEBUG
+    "[org.hibernate.SQL]": DEBUG

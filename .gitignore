@@ -1,0 +1,61 @@
+# ==============================================================================
+# KisanConnect — .gitignore
+# ==============================================================================
+
+# ---- Build output ----
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# ---- IDE ----
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/
+.settings/
+.classpath
+.project
+.factorypath
+*.swp
+*.swo
+*~
+
+# ---- Maven ----
+log/
+target/
+
+# ---- Java ----
+*.class
+*.jar
+*.war
+*.ear
+hs_err_pid*
+replay_pid*
+
+# ---- Spring Boot ----
+spring-shell.log
+
+# ---- Environment & Secrets ----
+.env
+*.env.local
+
+# ---- Temporary files ----
+.tmp/
+tmp/
+*.tmp
+*.bak
+
+# ---- OS files ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Lombok ----
+.apt_generated
+.apt_generated_tests
+
+# ---- Logs ----
+*.log
+logs/
